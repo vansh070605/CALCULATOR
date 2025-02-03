@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:wght@500&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #0a0a0a, #3a4452);
+    overflow: hidden;
+}
+
+
+.calculator{
+    width: 375px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, .2);
+}
+
+.display{
+    position: relative;
+    margin: 30px 0 40px;
+}
+
+.display input{
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    font-size: 35px;
+    color: #fff;
+    text-align: right;
+    pointer-events: none;
+}
+
+.display .display-input::placeholder{
+    color: #fff;
+}
+
+.display .display-result{
+    position: absolute;
+    left: 0;
+    font-size: 15px;
+    transform: translateY(65%);
+}
+
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.buttons button{
+    padding: 15px;
+    background: transparent;
+    border-radius: 10px;
+    border: none;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: -3px -3px 15px rgba(255, 255, 255, .1), 3px 3px 15px rgba(0, 0, 0, .6);
+}
+
+.buttons .operator{
+    position: relative;
+    color: #0ef;
+}
+
+.buttons .operator span{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+}
+
+.buttons .operator.backspace span{
+    display: flex;
+    align-items: center;
+    width: 22px;
+    height: 20px;
+    border: 2px solid #0ef;
+    border-left-color: transparent;
+    transform: translate(-35%, -50%) scale(.9);
+}
+
+.buttons .operator.backspace span::before{
+    content: '';
+    position: absolute;
+    left: -8px;
+    width: 12px;
+    height: 12px;
+    border-left: 2px solid #0ef;
+    border-bottom: 2px solid #0ef;
+    transform: rotate(45deg);
+}
+
+.buttons .operator.backspace span::after{
+    content: 'x';
+    padding-left: 1px;
+    font-size: 18px;
+    line-height: 1;
+}
+
+.equal-btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.equal-btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 22px;
+    background: #0ef;
+    color: #000;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    box-shadow: -3px -3px 15px rgba(255, 255, 255, .1), 3px 3px 15px rgba(0, 0, 0, .6);
+}
+
+.calc-title {
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+#particles-js {
+    width: 100%;
+    height: 100vh;
+    position: fixed; /* Use fixed instead of absolute */
+    top: 0;
+    left: 0;
+    z-index: -1;  /* Ensures it's behind everything */
+}
+
+  
